@@ -22,7 +22,7 @@ function verificar(){
     if (num1.length>0 && num2.length>0) {
         boton.style.display = "block";
     } else {
-        boton.style.display = "none"
+        boton.style.display = "none";
     }
 
 }
