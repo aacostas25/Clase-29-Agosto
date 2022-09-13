@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="container text-center mt-4">
-        <form>
+        <form id="formulario" class="formulario" action="">
             <div class="mb-3">
                 <label for="nombre" class="form-label"><strong>Nombre</strong></label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" 
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" 
                 onfocusout="mayuscula()" required>
             </div>
             <div class="mb-3">
                 <label for="apellido" class="form-label"><strong>Apellido</strong></label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellido"
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido"
                 required>
             </div>
             <label for="flexRadioDefault1">¿Desea llenar este formulario?</label>
@@ -44,7 +44,13 @@
             </div>
             </label>
             <label> <strong>Constraseña</strong>
-                <input type="password" id="password"
+                <input type="password" id="password" name="contra1"
+                placeholder="********" class="form-control"
+                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$^&]).{8,11}$" 
+                title="Debe contener..." required>
+            </label>
+            <label> <strong>Confirmar Contraseña</strong>
+                <input type="password" id="password" name="contra2"
                 placeholder="********" class="form-control"
                 pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$^&]).{8,11}$" 
                 title="Debe contener..." required>
