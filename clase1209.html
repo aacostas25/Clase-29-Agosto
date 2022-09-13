@@ -9,19 +9,24 @@
 <body>
     <div class="container text-center mt-4">
         <form id="formulario" class="formulario" action="">
-            <div class="mb-3">
-                <label for="nombre" class="form-label"><strong>Nombre</strong></label>
-                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" 
-                onfocusout="mayuscula()" required>
+            <div class="formulario-grupo" id="grupo-nombre">
+                <label for="nombre" class="formulario-label"><strong>Nombre</strong></label>
+                <div class="formulario-grupo-input">
+                    <input type="text" class="formulario-input" name="nombre" id="nombre" placeholder="Nombre" 
+                    onfocusout="mayuscula()" required>
+                </div>
+                <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
             </div>
-            <div class="mb-3">
-                <label for="apellido" class="form-label"><strong>Apellido</strong></label>
-                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido"
+            <div class="formulario-grupo" id="formulario-apellido">
+                <label for="apellido" class="formulario-label"><strong>Apellido</strong></label>
+                <div class="formulario-grupo-input">
+                    <input type="text" class="formulario-input" name="apellido" id="apellido" placeholder="Apellido"
                 required>
+                </div>
             </div>
             <label for="flexRadioDefault1">¿Desea llenar este formulario?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="otro()">
+                <input class="form-check-input" type="radio" name="radios" id="radio1" onclick="otro()">
                 <label class="form-check-label" for="flexRadioDefault1">
                   Sí
                   <br>
@@ -29,7 +34,7 @@
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input" type="radio" name="radios" id="flexRadioDefault2" onclick=limpiar() checked>
                 <label class="form-check-label" for="flexRadioDefault2">
                   No
                 </label>

@@ -3,6 +3,7 @@ const formulario = document.getElementById("formulario"); //sabe que es todo el 
 const email = document.getElementById("mail");
 const siboton = document.getElementById("flexRadioDefault1");
 const inputs = document.querySelectorAll('#formulario input')
+
 email.addEventListener("input", function (event) {
     if (email.validity.typeMismatch) {
         email.setCustomValidity("Se espera una dirección de correo electronico");
@@ -35,13 +36,16 @@ function otro() {
 </div></label>`;
 }
 
+
+
+
 const validarFormulario = (e) => {
     switch (e.target.name){
         case "nombre":
             console.log('Funciona')
         break;
         case "apellido":
-            console.log('Funciona')
+            console.log('Apellido')
         break;
         case "mail":
             console.log('Funciona')
